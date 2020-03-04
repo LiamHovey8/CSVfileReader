@@ -20,12 +20,12 @@ print("REF_DATE, GEO, DGUID, Sex, Age group, Student response, UOM, UOM_ID, SCAL
 
 # takes all rows from the csv and places them in the array
 def load_all_from_csv():
+    # clear the list
     del arrayOfRows[:]
     with open(filename) as csv_file:
         """create a reader object out of the csv file"""
         csv_reader = csv.reader(csv_file)
         rowCount = 0
-
         """append each of the rows onto the array so that we have an array of our custom object"""
         for row in csv_reader:
             if rowCount != 0:
